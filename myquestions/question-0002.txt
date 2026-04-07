@@ -1,0 +1,25 @@
+Problema: Estadísticas agregadas por grupo en un DataFrame
+
+Recibes un DataFrame de pandas que contiene una columna categórica (de texto)
+y varias columnas numéricas. Tu tarea es calcular estadísticas resumidas
+agrupando por la columna categórica.
+
+Tu Misión: Escribe una función llamada resumir_por_grupo(df, col_grupo, col_valor)
+que realice lo siguiente:
+
+1. Agrupe el DataFrame por la columna indicada en col_grupo.
+2. Para la columna indicada en col_valor, calcule las siguientes estadísticas
+   por grupo: media, mediana, desviación estándar y conteo de registros.
+3. Devuelva un DataFrame con una fila por grupo y cuatro columnas llamadas
+   exactamente: 'media', 'mediana', 'std', 'conteo'.
+4. El DataFrame resultado debe estar ordenado de mayor a menor por la columna
+   'media' y tener el índice reiniciado (reset_index con drop=True).
+
+Argumentos:
+- df: un DataFrame de pandas.
+- col_grupo: string con el nombre de la columna categórica para agrupar.
+- col_valor: string con el nombre de la columna numérica a resumir.
+
+Retorno:
+- Un DataFrame con columnas ['media', 'mediana', 'std', 'conteo'], ordenado
+  de mayor a menor por 'media', con índice reiniciado.
