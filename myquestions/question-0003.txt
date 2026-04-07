@@ -1,0 +1,28 @@
+Problema: Selección de variables por importancia con Random Forest
+
+Recibes arrays de numpy con datos de entrenamiento para un problema de
+clasificación binaria. Tu tarea es identificar cuáles son las características
+más importantes usando un modelo de bosques aleatorios.
+
+Tu Misión: Escribe una función llamada seleccionar_features_importantes(X, y, k)
+que realice lo siguiente:
+
+1. Entrene un RandomForestClassifier de sklearn con n_estimators=100
+   y random_state=42 usando X e y.
+2. Extraiga el atributo feature_importances_ del modelo entrenado.
+3. Identifique los índices de las k características más importantes
+   (las que tienen los valores más altos de importancia).
+4. Devuelva una tupla con dos elementos:
+   - Un array de numpy con los índices de las k características más
+     importantes, ordenados de mayor a menor importancia.
+   - Un array de numpy con los valores de importancia correspondientes
+     a esos índices, en el mismo orden.
+
+Argumentos:
+- X: array de numpy de forma (n_muestras, n_features) con los datos de entrenamiento.
+- y: array de numpy de forma (n_muestras,) con las etiquetas binarias.
+- k: entero, número de características a seleccionar.
+
+Retorno:
+- Una tupla (indices_top_k, importancias_top_k) donde ambos son arrays
+  de numpy de longitud k.
