@@ -1,0 +1,29 @@
+Problema: Evaluación de un modelo de regresión con métricas de error
+
+Recibes arrays de numpy con datos para un problema de regresión continua.
+Tu tarea es entrenar un modelo de regresión lineal Ridge, hacer predicciones
+y calcular métricas de error que resuman su desempeño.
+
+Tu Misión: Escribe una función llamada evaluar_regresion_ridge(X_train, y_train,
+X_test, y_test, alpha) que realice lo siguiente:
+
+1. Entrene un modelo Ridge de sklearn con el parámetro de regularización alpha.
+2. Ajuste el modelo usando X_train e y_train.
+3. Genere predicciones sobre X_test.
+4. Calcule las siguientes métricas comparando y_test con las predicciones:
+   - MAE: error absoluto medio (mean_absolute_error de sklearn).
+   - RMSE: raíz del error cuadrático medio (raíz cuadrada del mean_squared_error).
+   - R2: coeficiente de determinación (r2_score de sklearn).
+5. Devuelva un diccionario con las claves exactamente: 'mae', 'rmse', 'r2',
+   y sus valores numéricos redondeados a 4 decimales.
+
+Argumentos:
+- X_train: array de numpy de forma (n_train, n_features) con datos de entrenamiento.
+- y_train: array de numpy de forma (n_train,) con valores objetivo de entrenamiento.
+- X_test: array de numpy de forma (n_test, n_features) con datos de prueba.
+- y_test: array de numpy de forma (n_test,) con valores objetivo de prueba.
+- alpha: float, parámetro de regularización del modelo Ridge.
+
+Retorno:
+- Un diccionario con claves 'mae', 'rmse', 'r2' y valores numéricos
+  redondeados a 4 decimales.
