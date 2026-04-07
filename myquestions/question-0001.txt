@@ -1,0 +1,21 @@
+Problema: Limpieza y filtrado de un DataFrame
+
+Recibes un DataFrame de pandas con columnas numéricas que puede contener
+valores faltantes (NaN) y filas duplicadas. Tu tarea es limpiar el DataFrame
+siguiendo pasos específicos.
+
+Tu Misión: Escribe una función llamada limpiar_dataframe(df, umbral) que realice
+lo siguiente:
+
+1. Elimine las filas duplicadas del DataFrame.
+2. Elimine las filas en las que el número de valores NaN sea MAYOR que el umbral
+   indicado (es decir, conserva las filas donde la cantidad de NaN es <= umbral).
+3. Rellene los valores NaN restantes con el promedio de cada columna.
+4. Devuelva el DataFrame resultante con el índice reiniciado (reset_index con drop=True).
+
+Argumentos:
+- df: un DataFrame de pandas con columnas numéricas.
+- umbral: número entero que indica el máximo de NaNs permitidos por fila.
+
+Retorno:
+- Un DataFrame de pandas limpio según los pasos anteriores.
